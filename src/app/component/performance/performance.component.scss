@@ -1,0 +1,56 @@
+.mainheader{
+    padding-left: 30px;
+    padding-right: 30px;
+.performanceblock{
+    width: 506px;
+    height: 179px;
+    border-radius: 8px;
+    box-shadow: 0 0 7px 0 rgba(183, 180, 180, 0.5);
+    background-color: #ffffff;
+    margin-top: 133px;
+    padding-left: 15px;
+    .perfcard{
+        max-width: 191px;
+        height: 179px;
+        border-radius: 8px;
+        box-shadow: 0 0 7px 0 rgba(183, 180, 180, 0.5);
+        background-color: #66d05d;
+    }
+}
+}
+.card_title{
+    padding-left: 30px;
+    padding-right: 30px;
+.card_title1{
+    padding-top: 65px;
+    border-bottom-color: rgb(32, 28, 28);
+    .nav-link{
+        float: right;
+    }
+}
+}
+.perflesson{
+    
+    height: 57px;
+    .preflessoncol{
+        height: 19px;
+        font-size: 14px;
+        font-weight: 900;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #0d0d0d;
+        padding-top: 3%;
+    }
+    .preflessoncol1{
+        float: right;
+        width: 41px;
+        height: 41px;
+        background-color:#66d05d;
+        border-radius: 50%;
+        display: inline-block;
+        padding: 6%;
+
+    }
+}

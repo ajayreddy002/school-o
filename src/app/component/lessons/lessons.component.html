@@ -1,0 +1,27 @@
+<div class="p-30">
+    <div class="main_block">
+        <div class="header_block">
+            <h1>Lessons</h1>
+            
+        </div>
+<div class="row web">
+<mat-card class="lessonCard" *ngFor="let lesson of lessonData" (click)="navigateToLesson(lesson)">
+    
+    <span><b>{{lesson?.title}}</b></span><br>
+    <span class="description"><b>It is a long established fact that a reader will be distracted by the readable content</b></span>
+   <hr>
+    
+        <div class="row">
+            <div class="col-sm-6" >Topics: {{lesson?.topic_count}}</div>
+            <div class="col-sm-6" >
+                <span class="show-progress">Progress</span>
+                <mat-progress-bar class="progress-bar" mode="determinate" value="{{lesson?.percentage_completed}}"></mat-progress-bar>
+                <span>{{lesson?.percentage_completed}}%</span>
+            </div>
+        </div>
+    
+   </mat-card>
+
+</div>
+</div>
+

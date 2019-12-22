@@ -1,14 +1,86 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,500,700&display=swap');
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  padding: 0
+}
+
 .mat-drawer-side {
-    border: none;
-    box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+  border: none;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
 }
+
+// h1,h2,h3,h4,h5,h6,p{
+//     margin: 0;
+//     padding: 0;
+// }
+
 .p-30 {
-    padding: 20px 30px;
+  padding: 0px 20px;
 }
+
 // p, span, h2, h3{
 //     font-family: 'Open Sans', sans-serif;
 // }
+.mat-list-item-content {
+  border-radius: 15px;
+  width: 171px;
+  height: 67px;
+}
+
+.border_bottom {
+  border-bottom: solid 1px #e2e2e2;
+}
+
+.button {
+  outline: none;
+}
+
+.dialog-arrow {
+  border-color: transparent;
+  border-bottom-color: #f9f9f9;
+  border-style: dashed dashed solid;
+  border-width: 0 11px 11px;
+  position: absolute;
+  top: 9px;
+  z-index: 1001;
+  height: 0;
+  width: 0;
+  left: auto;
+  right: 10px;
+  //   margin-right: 230px;
+}
+
+.topic_title {
+  background-color: #ffffff;
+  height: 61px;
+  box-shadow: 0 0 10px 0 rgba(193, 193, 193, 0.5);
+
+  // padding-bottom: 30px;
+  .title {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    font-family: 'Open Sans', sans-serif;
+
+    h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #395dd3;
+    }
+
+    p {
+      font-size: 12px;
+      color: #111111;
+      font-family: 'Poppins', sans-serif;
+    }
+  }
+}

@@ -1,0 +1,256 @@
+<div class="topic_title">
+    <div class="title">
+        <h3>Homework</h3>
+        <!-- <p>Lessons > {{lessonTitle}}</p> -->
+    </div>
+</div>
+<div class="p-30">
+    <div class="main_block">
+        <div class="header_block">
+            <h1>Hello {{userDetails?.firstname}}</h1>
+            <button class="stat">Statisticks
+                <img src="../../../assets/pie-chart.svg" alt="">
+            </button>
+        </div>
+        <div class="card_block">
+            <!-- Cuurent Practices -->
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="card_title1">
+                        <div class="row m-0">
+                            <div class="col-md-8">
+                                <h3> Current Practices | {{currentPracticesData?.length}} Items</h3>
+                            </div>
+                            <div class="col-md-4">
+                                <p class="nav-link ml-auto" *ngIf="!isCpCollapsed && currentPracticesData?.length > 0" (click)="showAllCp('currentpractice')">View All</p>
+                                <p class="nav-link ml-auto" *ngIf="isCpCollapsed" (click)="showAllCp('currentpractice')">Hide</p>
+                            </div>
+                        </div>
+                    </div>
+                    <ng-container *ngIf="currentPracticesData?.length > 0">
+                        <div *ngFor="let pt of currentPracticesData | slice:0:[cpMax]" class="card card_content mb-3" >
+                            <div class="card_title">
+                                <h1>{{pt?.name}}</h1>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="content">
+                                        <p>{{pt?.subject_slug}}</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="days">
+                                        <h1 class="number">4</h1>
+                                        <p class="day">Days to go</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border_bottom"></div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="content">
+                                        <p class="due">Due Date
+                                        </p>
+                                        <p class="due mt">{{pt?.due_date | date}}</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="days_btn">
+                                        <button  (click)="redirectToVideoPage(pt)">Start Video</button>
+                                        <button class="ml-3">Start Practice</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                    <ng-container *ngIf="currentPracticesData.length === 0">
+                        <div class="card card_content">
+                            <div class="card_title">
+                                <!-- <h1>Whole Numbers</h1> -->
+                                <h1>No Current Practices</h1>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+                <!-- Current Tests -->
+                <div class="col-md-6 col-sm-12">
+                    <div class="card_title1">
+                        <div class="row m-0">
+                            <div class="col-md-8">
+                                <h3> Current Tests | {{currentTestsData?.length}} Items</h3>
+                            </div>
+                            <div class="col-md-4">
+                                <p class="nav-link ml-auto" *ngIf="!isCtCollapsed && currentTestsData?.length > 0" (click)="showAllCt('currenttests')">View All</p>
+                                <p class="nav-link ml-auto" *ngIf="isCtCollapsed" (click)="showAllCt('currenttests')">Hide</p>
+                            </div>
+                        </div>
+                    </div>
+                    <ng-container *ngIf="currentTestsData?.length > 0">
+                        <div *ngFor="let ct of currentTestsData | slice:0:[ctMax]" class="card card_content mb-3">
+                            <div class="card_title">
+                                <h1>{{ct?.name}}</h1>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="content">
+                                        <p>{{ct?.subject_slug}}</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="days">
+                                        <h1 class="number">4</h1>
+                                        <p class="day">Days to go</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border_bottom"></div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="content">
+                                        <p class="due">Due Date
+                                        </p>
+                                        <p class="due mt">{{ct?.due_date | date}}</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="days_btn">
+                                        <button [routerLink]="['/app/homework/test']">Start Test</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                    <ng-container *ngIf="currentTestsData.length === 0">
+                        <div class="card card_content">
+                            <div class="card_title">
+                                <!-- <h1>Whole Numbers</h1> -->
+                                <h1>No Current Tests</h1>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+
+
+                <!-- Late Practice Data  -->
+                <div class="col-md-6 col-sm-12">
+                    <div class="card_title1 mt-5">
+                        <div class="row m-0">
+                            <div class="col-md-8">
+                                <h3> Pending Practices | {{latePracticeData.length}} Items</h3>
+                            </div>
+                            <div class="col-md-4">
+                                <p class="nav-link ml-auto" *ngIf="!isLpCollapsed && latePracticeData?.length > 0" (click)="showAllLp('latepractices')">View All</p>
+                                <p class="nav-link ml-auto" *ngIf="isLpCollapsed" (click)="showAllLp('latepractices')">Hide</p>
+                            </div>
+                        </div>
+                    </div>
+                    <ng-container *ngIf="latePracticeData.length > 0">
+                        <div *ngFor="let practice of latePracticeData | slice:0:[ltMax] " class="card card_content mb-3">
+                            <div class="card_title">
+                                <h1>{{practice?.name}}</h1>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="content">
+                                        <p>{{practice?.subject_slug}}</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="late">
+                                        <p>Late</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border_bottom"></div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="content">
+                                        <p class="due">Due Date
+                                        </p>
+                                        <p class="due mt" *ngIf="practice?.due_date !='0000-00-00 00:00:00'">
+                                            {{practice?.due_date | date}}</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="days_btn">
+                                        <button [routerLink]="['/app/homework/video']">Start Video</button>
+                                        <button class="ml-3">Start Practice</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                    <ng-container *ngIf="latePracticeData.length === 0">
+                        <div class="card card_content">
+                            <div class="card_title">
+                                <!-- <h1>Whole Numbers</h1> -->
+                                <h1>No Pending Practices</h1>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+                <!-- Late Tests Data  -->
+
+                <div class="col-md-6 col-sm-12">
+                    <div class="card_title1 mt-5">
+                        <div class="row m-0">
+                            <div class="col-md-8">
+                                <h3> Pending Tests | {{lateTestsData.length}} Items</h3>
+                            </div>
+                            <div class="col-md-4">
+                                <p *ngIf="!isColapsed && lateTestsData.length > 0" class="nav-link ml-auto"
+                                    (click)="showAll('pendingtest')">View
+                                    All</p>
+                                <p *ngIf="isColapsed" class="nav-link ml-auto" (click)="showAll('pendingtest')">Hide</p>
+                            </div>
+                        </div>
+                    </div>
+                    <ng-container *ngIf="lateTestsData.length > 0">
+                        <div *ngFor="let item of lateTestsData | slice:0:[max]" class="card card_content mb-3">
+                            <div class="card_title">
+                                <!-- <h1>Whole Numbers</h1> -->
+                                <h1>{{item?.name}}</h1>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="content">
+                                        <!-- <p>How to use whole numbers in real life</p> -->
+                                        <p>{{item?.subject_slug}}</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="late">
+                                        <p>Late</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border_bottom"></div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="content">
+                                        <p class="due">Due Date
+                                        </p>
+                                        <p class="due mt">{{item?.due_date | date}}</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="days_btn">
+                                        <button [routerLink]="['/app/homework/test']">Start Test</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                    <ng-container *ngIf="lateTestsData.length === 0">
+                        <div class="card card_content">
+                            <div class="card_title">
+                                <!-- <h1>Whole Numbers</h1> -->
+                                <h1>No Pending Tests</h1>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+.top_circle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 95px;
+  height: 95px;
+  opacity: 0.1;
+  background-color: #609cfc;
+  margin-top: -2px;
+  right: 0;
+  border-radius: 0 0 90px 0;
+}
+
+.header_title {
+  text-align: center;
+    padding: 40px 0px;
+  h2 {
+    font-size: 16.1px;
+    font-weight: 900;
+    letter-spacing: -0.32px;
+    color: #29203e;
+    font-family: 'Open Sans', sans-serif;
+  }
+}

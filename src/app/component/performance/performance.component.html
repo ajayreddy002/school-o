@@ -1,0 +1,155 @@
+<div class="p-30">
+    <div class="row mainheader">
+        <div class="col-xl-6">
+<div class="performanceblock">
+    <div class="row">
+        <div class="col-sm-4 col-xs-12 perfcard"></div>
+        <div class="col-sm-4 col-xs-12 "><img src="../../../assets/performancebades.png" alt=""></div>
+        <div class="col-sm-4  col-xs-12 "><img src="../../../assets/performancebades.png" alt=""></div>
+    </div>
+</div>
+        </div>
+        <div class="col-xl-6">
+<div class="performanceblock">
+    <div class="row" >
+        <div class="col-sm-4 col-lg-4" *ngFor="let item of conceptual"> 
+            <circle-progress [percent]="item.percentage" [showTitle]="true" [showInnerStroke]="true" [clockwise]="true" [showSubtitle]="false" [showTitle]="false"
+            [startFromZero]="true" [showZeroOuterStroke]="true" [radius]="40" [outerStrokeColor]="'#FAB52F'" [outerStrokeGradientStopColor]="'#FAB52F'"
+            [innerStrokeColor]="'#FCEDAF'" [outerStrokeWidth]="10" [space]="-11" [innerStrokeWidth]="16" [outerStrokeLinecap]="'square'"
+            [animation]="true" [animationDuration]="500"></circle-progress>{{item.academic_standard_name}}
+        </div>
+        <!-- <div class="col-sm-4 col-xs-12 ">    <circle-progress [percent]="60" [showTitle]="true" [showInnerStroke]="true" [clockwise]="true" [showSubtitle]="false" [showTitle]="false"
+            [startFromZero]="true" [showZeroOuterStroke]="true" [radius]="40" [outerStrokeColor]="'#4882c2'" [outerStrokeGradientStopColor]="'#4882c2'"
+            [innerStrokeColor]="'#D4D6FD'" [outerStrokeWidth]="10" [space]="-11" [innerStrokeWidth]="16" [outerStrokeLinecap]="'square'"
+            [animation]="true" [animationDuration]="500"></circle-progress></div>
+        <div class="col-sm-4  col-xs-12 ">  <circle-progress [percent]="80" [showTitle]="true" [showInnerStroke]="true" [clockwise]="true" [showSubtitle]="false" [showTitle]="false"
+            [startFromZero]="true" [showZeroOuterStroke]="true" [radius]="40" [outerStrokeColor]="'#66D05D'" [outerStrokeGradientStopColor]="'#66D05D'"
+            [innerStrokeColor]="'#E1FCCE'" [outerStrokeWidth]="10" [space]="-11" [innerStrokeWidth]="16" [outerStrokeLinecap]="'square'"
+            [animation]="true" [animationDuration]="500"></circle-progress></div> -->
+    </div>
+</div>
+</div> 
+</div>
+<div class="row">
+<div class="col-md-6 col-sm-12 card_title">
+<div class="card_title1">
+    <div class="row">
+        <div class="col-md-8">
+            <h6>Lesson Wise Perfomance</h6>
+        </div>
+        <div class="col-md-4">
+            <h6 class="nav-link">View All</h6>
+        </div>
+    </div>
+</div>
+<div class="row perflesson">
+    <div class="col-md-8 preflessoncol">Whole Numbers</div>
+    <div class="col-md-4" style="padding-top: 2%;"><div class="preflessoncol1">98</div></div>
+</div>
+</div>
+<div class="col-md-6 col-sm-12 card_title">
+<div class="card_title1">
+    <div class="row">
+        <div class="col-md-8">
+            <h6>Areas to be improved</h6>
+        </div>
+        <div class="col-md-4">
+            <h6 class="nav-link">View All</h6>
+        </div>
+    </div>
+</div>
+<div class="row perflesson">
+    <div class="col-md-8 preflessoncol">Whole Numbers</div>
+    <div class="col-md-4" style="padding-top: 2%;"><div class="preflessoncol1">98</div></div>
+</div>
+</div>
+<!-- <ng-container *ngIf="currentTestsData?.length > 0">
+    <div *ngFor="let ct of currentTestsData | slice:0:[max]" class="card card_content">
+        <div class="card_title">
+            <h1>{{ct?.name}}</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="content">
+                    <p>{{ct?.subject_slug}}</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="days">
+                    <h1 class="number">4</h1>
+                    <p class="day">Days to go</p>
+                </div>
+            </div>
+        </div>
+        <div class="border_bottom"></div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="content">
+                    <p class="due">Due Date
+                    </p>
+                    <p class="due mt">{{ct?.due_date}}</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="days_btn">
+                    <button>Start Test</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container> -->
+<!-- <ng-container>
+    <div class="card card_content">
+        <div class="card_title">
+            <h1>No Current Tests</h1>
+        </div>
+    </div>
+</ng-container> -->
+</div>
+
+
+
+<div class="row">
+    <div class="col-md-6 col-sm-12 card_title">
+    <div class="card_title1">
+        <div class="row">
+            <div class="col-md-8">
+                <h6>Lessons Perfomed Well</h6>
+            </div>
+            <div class="col-md-4">
+                <h6 class="nav-link">View All</h6>
+            </div>
+        </div>
+    </div>
+    <div class="row perflesson">
+        <div class="col-md-8 preflessoncol">Whole Numbers</div>
+        <div class="col-md-4" style="padding-top: 2%;"><div class="preflessoncol1">98</div></div>
+    </div>
+    </div>
+    <div class="col-md-6 col-sm-12 card_title">
+    <div class="card_title1">
+        <div class="row">
+            <div class="col-md-8">
+                <h6>Topics Perfomed Well</h6>
+            </div>
+            <div class="col-md-4">
+                <h6 class="nav-link">View All</h6>
+            </div>
+        </div>
+    </div>
+    <div *ngFor="let data of topicBadges;let i=index">
+    <div class="row perflesson"  style="background-color:white;" *ngIf="(i+1)%(2) == '1'">
+        <div class="col-md-8 preflessoncol">{{data.category_name}}</div>
+        <div class="col-md-4" style="padding-top: 2%;"><div class="preflessoncol1">{{data.score}}</div></div>
+    </div>
+        <div class="row perflesson"  style="background-color: #f0f6ff;" *ngIf="(i+1)%(2) == '0'">
+            <div class="col-md-8 preflessoncol">{{data.category_name}}</div>
+            <div class="col-md-4" style="padding-top: 2%;"><div class="preflessoncol1">{{data.score}}</div>
+        </div>
+    
+    </div>
+    </div>
+    </div>
+  
+
+</div>

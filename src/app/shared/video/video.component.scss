@@ -1,0 +1,94 @@
+.video-container{
+    background-color: #ffffff;
+    .video-container-hd{
+        text-align: center;
+        padding: 40px 0;
+        h5{
+            color: #395dd3;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        p{
+            font-size: 12px;
+            color: #111111;
+        }
+    }
+    .video-body{
+        display: flex;
+        .video-tag{
+            flex: 1;
+        }
+        .video-content{
+            margin-left: 14px;
+            flex: 1;
+            padding: 20px 0;
+            .introduction{
+                margin-bottom: 20px;
+                h6{
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                }
+                p{
+                    font-size: 12px;
+                }
+            }
+            .ideas-introduction{
+                width: 460px;
+                margin: 0 auto;
+                margin-bottom: 20px;
+                h6{
+                    background-color: #f7f7f7;
+                    height: 40px;
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .concept-ideas{
+                    display: flex;
+                    align-items: center;
+                    background-color: #ffffff;
+                    box-shadow: 0 0 8px 0 rgba(198, 198, 198, 0.5);
+                    height: 130px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .ideas-tag{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        img{
+                            width: 30px;
+                            height: 30px;
+                            object-fit: contain;
+                        }
+                       p{
+                           font-size: 14px;
+                           color: #22354d;
+                       } 
+                    }
+
+                    .ideas-tag + .ideas-tag {
+                        margin-left: 30px;
+                    }
+                }
+            }
+
+            .start-btn{
+                width: 340px;
+                margin: 0 auto;
+                button{
+                    border-radius: 14px;
+                    background-color: #385dd4;
+                    width: 100%;
+                    padding: 10px 0;
+                    color: #ffffff;
+                    border: none;
+                    outline: none;
+                }
+            }
+        }
+    }
+}

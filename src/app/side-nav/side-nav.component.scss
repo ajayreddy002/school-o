@@ -6,10 +6,12 @@
   right: 0;
 
   .mat-nav-list {
-    padding-top: 0px;
+    border-radius: 5px;
+
     a.active {
-      background: #3f51b5;
+      background-color: #395dd3;
       color: #fff;
+      height: 67px;
     }
 
     div>div>div>a {
@@ -29,19 +31,22 @@
 }
 
 .sidenav .mat-toolbar {
-  background: #3f51b5;
+  background: #395dd3;
 }
 
 .mat-toolbar.mat-primary {
   position: sticky;
   top: 0;
   z-index: 1;
+  background-color: #395dd3;
+  height: 75px;
 }
 
 .logo {
   background: #ffffff;
-  height: 64px;
+  height: 75px;
   text-align: center;
+
   img {
     padding-top: 15px;
   }
@@ -49,18 +54,230 @@
 
 .line {
   // border-bottom: 0.1px solid #e0e0e0;
+  height: 67px;
+
+  img {
+    width: 40px;
+    margin-left: -10px;
+  }
+
   span {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 14px;
+    margin-left: 18px;
   }
 }
+
 .link {
   padding: 0 15px;
 }
 
 .mat-list-item {
+  border-radius: 5px;
+  height: 67px;
+  margin-bottom: 18px;
+
   span {
     white-space: nowrap;
   }
+}
+
+
+.nav_header {
+  width: 100%;
+  margin-top: 20px;
+
+  mat-select {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+  }
+}
+
+::ng-deep .mat-form-field-infix {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+}
+
+::ng-deep .mat-toolbar .mat-form-field-underline {
+  background: none;
+  display: none;
+}
+
+::ng-deep .mat-select-panel {
+  // border-radius: 10px !important;
+  background-color: #f9f9f9 !important;
+  margin-top: 50px !important;
+  box-shadow: none !important;
+  min-width: 240px !important;
+  max-width: 100% !important;
+}
+
+::ng-deep .mat-form-field-label-wrapper {
+  left: 40px;
+  // top: 0 !important;
+}
+
+::ng-deep .mat-option.mat-active {
+  background-color: #395dd3 !important;
+  color: #ffffff;
+}
+
+::ng-deep .mat-option.mat-selected {
+  background-color: #395dd3 !important;
+
+  &:hover {
+    background: none;
+  }
+}
+
+.not_icon {
+  i {
+    cursor: pointer;
+  }
+}
+
+.circle {
+  width: 29px;
+  height: 29px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  text-align: center;
+
+  &.bg_brown {
+    border: 1px solid #a7a4a4 !important;
+  }
+}
+
+.user_name {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+
+  &.colr_brwon {
+    color: #18191a;
+  }
+}
+
+.prf_block {
+  padding: 15px;
+
+  p {
+    font-size: 9px;
+    font-weight: 500;
+    color: #18191a;
+    font-family: 'Open Sans', sans-serif;
+  }
+}
+
+// .user_menu {
+
+// }
+.prof_action {
+  text-align: center;
+  padding-top: 20px;
+
+  p {
+    cursor: pointer;
+    font-size: 9px;
+    font-weight: 500;
+    color: #18191a;
+    font-family: 'Open Sans', sans-serif;
+  }
+}
+
+.not_card {
+  width: 500px !important;
+
+  padding: 20px;
+
+  .clear {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+::ng-deep .mat-badge-content {
+  right: -18px !important;
+}
+
+::ng-deep .prof_menu {
+  min-width: 173px !important;
+  border-radius: 5px !important;
+  box-shadow: 0 0 10px 0 rgba(229, 229, 229, 0.5) !important;
+  background-color: #f9f9f9 !important;
+  margin-right: 60px !important;
+  margin-top: 12px !important;
+  .dialog-arrow {
+    right: 70px !important;
+    top: 1px !important;
+  }
+}
+
+::ng-deep .not_card {
+  width: 500px !important;
+  max-width: 100% !important;
+  border-radius: 9px !important;
+  background-color: #f9f9f9 !important;
+  min-height: 371px !important;
+  margin-top: 18px !important;
+  padding: 20px;
+  box-shadow: none !important;
+
+  .clear {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    background-color: #e8e8e8;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: -25px;
+    h2 {
+      font-size: 16px;
+      font-weight: 900;
+      font-family: 'Open Sans', sans-serif;
+      color: #0a0b0e;
+      margin-left: 15px;
+      padding-top: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 900;
+      font-family: 'Open Sans', sans-serif;
+      color: #437eff;
+      margin-right: 15px;
+      padding-top: 10px;
+    }
+  }
+
+  .not_content {
+    padding-top: 23px;
+    h4 {
+      font-size: 16px;
+      font-weight: 900;
+      color: #18191a;
+      font-family: 'Open Sans', sans-serif;
+
+      span {
+        font-size: 14px;
+        font-weight: 500;
+        color: #8e96aa;
+      }
+    }
+  }
+
+  // box-shadow: none !important;
+}
+::ng-deep .mat-select-arrow {
+  margin-right: 60px !important;
 }

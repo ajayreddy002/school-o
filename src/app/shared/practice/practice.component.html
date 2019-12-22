@@ -1,0 +1,43 @@
+<div class="p-30">
+    <div class="main_test">
+        <div class="title_block">
+            <h1>How To Use Whole Numbers In Real Life</h1>
+        </div>
+        <div class="main_form_block">
+            <div class="circle_left"></div>
+            <div class="row m-0">
+                <div class="col-md-1"></div>
+                <div class="col-md-9">
+                    <div class="form">
+                        <div class="form_header">
+                            <p>Tap to select Answer</p>
+                            <p>Attempts 0/2</p>
+                        </div>
+                        <div class="practic_block">
+                            <div class="white_bg">
+                                <h3>16+18+20+169= </h3>
+                            </div>
+                            <div class="main_btn_block">
+                                <div class="answer_block" *ngFor="let item of answers">
+                                    <div class="answer_1">
+                                        <button class="ans_btn">{{item?.name}}</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sub_btn">
+                                <button *ngIf="questionIndex !='0'" (click)="previousQuestion()">Back</button>
+                                <button class="ml-3">Submit</button>
+                                <button *ngIf="!showSubmitButton" (click)="nextQuestion()" class="ml-3">Next</button>
+                            </div>
+                            <div class="error_block">
+                                <h4>Hint</h4>
+                                <p>Please try again</p>
+                            </div>
+                            <div class="circle_right"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>

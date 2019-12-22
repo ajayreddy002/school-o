@@ -1,15 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { Menu4Component } from './menu4/menu4.component';
-import { Menu5Component } from './menu5/menu5.component';
+import { PerformanceComponent } from './performance/performance.component';
+import { AnnouncementsComponent } from './announcements/announcements.component';
+import { AuthGuard } from '../auth/auth.guard';
+
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'homework', pathMatch: 'full' },
-  { path: 'homework', component: Menu4Component },
-  { path: 'lessons', component: Menu5Component },
-  { path: 'tests', component: Menu5Component },
-  { path: 'practice', component: Menu5Component }
+    { path: 'performance', component: PerformanceComponent },
+    { path: 'announcements', component: AnnouncementsComponent },
+    { path: '', pathMatch: 'full', canActivate: [AuthGuard],
+  },
+  { path: 'homework', loadChildren: () => import('./homework/homework.module').then(mod => mod.HomeworkModule) },
+  { path: 'lessons', loadChildren: () => import('./lessons/lessons.module').then(mod => mod.LessonsModule) },
+ 
 ];
 
 @NgModule({

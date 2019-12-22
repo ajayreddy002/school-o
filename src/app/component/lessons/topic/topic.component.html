@@ -1,0 +1,61 @@
+<div class="">
+    <div class="topic_title">
+        <div class="title">
+            <h3>{{lessonTitle}}</h3>
+            <p>Lessons > {{lessonTitle}}</p>
+        </div>
+    </div>
+    <div class="over_view p-30">
+        <h2>LESSON OVERVIEW</h2>
+        <p [innerHtml]=lessonDescription>
+            
+        </p>
+    </div>
+    <div class="list_block p-30">
+        <div class="row">
+            <div class="col-md-8 col-sm-12">
+                <div class="card lesson_card  mb-3" *ngFor="let topic of topics">
+                    <h4>{{topic?.subject_name}}</h4>
+                    <div class="card_content">
+                        <p [innerHtml]=topic?.description></p>
+                            <div  class="late">
+                                <p>Late</p>
+                            </div>
+                    </div>
+                    <div class="border-bottom mt-3 mb-4"></div>
+                    <div class="row">
+                        <div class="col-md-6 due">
+                            <h5>Due Date</h5>
+                            <h5>23 Dec</h5>
+                        </div>
+                        <div class="col-md-3 play_btn">
+                            <button (click)="videoRedirect(topic)">Play Video</button>
+                        </div>
+                        <div class="col-md-3 play_btn">
+                            <button>Start Practice</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="card topic_block">
+                    <div class="total">
+                        <p>Total Topics</p>
+                        <h4>{{this.topics.length}}</h4>
+                    </div>
+                    <div class="border-bottom mt-3"></div>
+                    <div class="row">
+                        <div class="col-md-6 assign">
+                           <p>Total assigned</p>
+                           <h5>2</h5>
+                        </div>
+                        <div class="col-md-6 assign">
+                           <p>Total assigned</p>
+                           <h5>1</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

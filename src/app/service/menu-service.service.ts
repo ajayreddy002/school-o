@@ -10,19 +10,19 @@ export class MenuServiceService {
   getMenuList() {
     const menuList: MenuItem[] = [
       {
-        group: { code: 'homework', name: 'Home Work', icon: '' },
+        group: { code: 'homework', name: 'Home Work', icon: '../../assets/homework.png' },
         menus: []
       },
       {
-        group: { code: 'lessons', name: 'Lessons', icon: '' },
+        group: { code: 'lessons', name: 'Lessons', icon: '../../assets/lessons.png' },
         menus: []
       },
       {
-        group: { code: 'tests', name: 'Tests', icon: '' },
+        group: { code: 'performance', name: 'Performance', icon: '../../assets/performancebades.png' },
         menus: []
       },
       {
-        group: { code: 'practice', name: 'Practice', icon: '' },
+        group: { code: 'announcements', name: 'Announcements', icon: '' },
         menus: []
       },
     ];

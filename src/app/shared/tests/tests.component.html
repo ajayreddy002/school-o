@@ -1,0 +1,60 @@
+<div class="p-30">
+    <div class="main_test">
+        <div class="title_block">
+            <h1>How To Use Whole Numbers In Real Life</h1>
+            <p>Homework <i class="fas fa-angle-right"></i> Currently Tests <i class="fas fa-angle-right"></i> How To Use
+                Whole Numbers In Real Life</p>
+            <div class="badge">
+                <div class="circle_badge" *ngFor="let data of responseData;let i=index"
+                    [ngClass]="{'success': data.success, 'danger': data.danger}">
+                    <p>
+                        {{i + 1}}
+                        <!-- <span matBadge="{{i + 1}}" matBadgeOverlap="false" [ngClass]="{'success': data.success, 'danger': data.danger}"></span> -->
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="main_form_block">
+            <div class="circle_left"></div>
+            <div class="row m-0">
+                <div class="col-md-1"></div>
+                <div class="col-md-9">
+                    <div class="form">
+                        <div class="timer_block">
+                            <img src="../../../assets/stop-watch.svg" alt="">
+                            <span>2m 3s</span>
+                        </div>
+                        <div class="field_block">
+                            <div class="question_block">
+                                <h2 innerHtml="{{currentQuestion}}">
+                                    <!-- {{responseData[0].name}} -->
+                                </h2>
+                            </div>
+                        </div>
+                        <div
+                            style="display: grid; grid-template-columns: 1fr 1fr;grid-row-gap: 20px; padding: 0 100px;">
+                            <div class="answer_block" *ngFor="let item of currentQuestionOptions">
+                                <div class="answer_1">
+                                    <button class="ans_btn" (click)="submittedOption(item)"
+                                        innerHtml="{{item?.name}}" [ngClass]="{'submited': item?.isSubmited}"></button>
+                                    <!-- <button class="ans_btn">Prime Number</button> -->
+                                </div>
+                                <!-- <div class="answer_2">
+                            <button class="ans_btn">Whole Number</button>
+                            <button class="ans_btn">Natural Number</button>
+                           </div> -->
+                            </div>
+                        </div>
+                        <div class="sub_btn">
+                            <button *ngIf="questionIndex !='0'" (click)="previousQuestion()">Back</button>
+                            <button *ngIf="showSubmitButton" (click)="submittedAnswer()" class="ml-3">Submit</button>
+                            <button *ngIf="!showSubmitButton" (click)="nextQuestion()" class="ml-3">Next</button>
+                        </div>
+                        <div class="circle_right"></div>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </div>
+</div>

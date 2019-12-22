@@ -1,0 +1,76 @@
+
+.web {
+    // padding-top: 10px;
+    padding-left:16px; 
+}
+
+.lessonCard{
+    width: 408px;
+  height:168px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px 0 rgba(204, 204, 204, 0.5);
+  background-color: #ffffff;
+  margin-left: 16px;
+  margin-top:16px;
+}
+.header_block {
+  display: flex;
+   justify-content: space-between;
+  padding: 40px 0px;
+  width:100%;
+
+  h1 {
+    width: 65px;
+    height: 25px;
+    font-family: Avenir;
+    font-size: 22px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #395dd3;
+    margin:auto;
+   justify-content: center;
+  }
+}
+.border-bottom {
+  padding-top:20px;
+}
+.description {
+width: 292px;
+  height: 36px;
+  font-family: Avenir;
+  font-size: 12px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 0.6px;
+  color: #100f0f;
+}
+.col-sm-6{
+  display:flex;
+}
+// .mat-progress-bar{
+//   height:6px;
+//   padding-top:10px;
+// }
+.progress-bar{
+   width:67px;
+  height:6px;
+  margin:10px 8px 0px;
+  border-radius: 4px;
+  // justify-content: space-between;
+}
+@media only screen and (max-width: 600px) {
+  .web {
+      padding-left:5px;
+       padding-right:10px;
+  }
+  .header_block{
+    h1{
+      padding:10px 20px 10px 0px;
+    }
+  }
+}

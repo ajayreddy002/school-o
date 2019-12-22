@@ -1,0 +1,147 @@
+.topic_title {
+  background-color: #ffffff;
+  height: 61px;
+  box-shadow: 0 0 10px 0 rgba(193, 193, 193, 0.5);
+  // padding-bottom: 30px;
+  .title {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    font-family: 'Open Sans', sans-serif;
+    h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #395dd3;
+    }
+    p {
+      font-size: 12px;
+      color: #111111;
+      font-family: 'Poppins', sans-serif;
+    }
+  }
+}
+.over_view {
+  padding-top: 30px;
+  h2 {
+    font-size: 16px;
+    font-weight: 900;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 18px;
+  }
+  p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #111111;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 14px;
+  }
+}
+.list_block {
+  padding-top: 30px;
+  .lesson_card {
+    box-shadow: 0 0 10px 0 rgba(187, 180, 180, 0.5);
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: none;
+    padding: 20px 30px;
+    h4 {
+      font-size: 15px;
+      font-weight: 900;
+      color: #111111;
+      font-family: 'Open Sans', sans-serif;
+    }
+    .card_content {
+      padding-top: 15px;
+      display: flex;
+      justify-content: space-between;
+       p {
+         font-size: 13px;
+         font-weight: 900;
+         font-family: 'Poppins', sans-serif;
+         line-height: 16px;
+         width: 80%;
+       }
+       .late {
+         width: 12%;
+         float: left;
+         text-align: center;
+         p {
+           background-color: #eb7676;
+           color: #ffffff;
+           font-family: 'Open Sans', sans-serif;
+           padding: 3px;
+         }
+       }
+    }
+  }
+  .due {
+    h5 {
+      font-size: 12px;
+      color: #111010;
+      font-family: 'Open Sans', sans-serif;
+      line-height: 14px;
+      font-weight: 900;
+    }
+  }
+  .play_btn {
+    button {
+      font-size: 12px;
+      font-weight: 900;
+      font-family: 'Open Sans', sans-serif;
+      background: #ffffff;
+      border:solid 1px #395dd3;
+      color: #395dd3;
+      padding: 7px 30px;
+      border-radius: 5px;
+      outline: none;
+      &:focus {
+        background: #395dd3;
+        color: #ffffff;
+      }
+    }
+  }
+}
+.topic_block {
+  box-shadow: 0 0 10px 0 rgba(187, 180, 180, 0.5);
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: none;
+  padding: 20px 0px;
+  padding-bottom: 0px;
+  .total {
+    text-align: center;
+    padding-top: 25px;
+    p {
+      font-size: 13px;
+      color: #111113;
+      margin: 0;
+      font-weight: 900;
+      font-family: 'Open Sans', sans-serif;
+    }
+    h4 {
+      font-size: 26px;
+      color: #395dd4;
+      font-weight: 900;
+      font-family: 'Open Sans', sans-serif;
+    }
+  }
+  .assign {
+    text-align: center;
+    padding-top: 25px;
+    border-right: 1px solid #e4e4e4;
+    padding-bottom: 30px;
+    p {
+      font-size: 13px;
+      color: #111113;
+      margin: 0;
+      font-weight: 900;
+      font-family: 'Open Sans', sans-serif;
+    }
+    h5 {
+      font-size: 26px;
+      color: #395dd4;
+      font-weight: 900;
+      font-family: 'Open Sans', sans-serif;
+    }
+  }
+}

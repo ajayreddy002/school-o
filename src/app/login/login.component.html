@@ -1,0 +1,40 @@
+<div class="container-fluid">
+
+  <mat-card class="login-card">
+    <mat-card-header class="login-card-header">
+      <mat-card-title>
+        <img src="../../assets/OaksLogo.svg" alt="">
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="login-card--form" [formGroup]="loginForm">
+        <table class="login-card-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="login-card-full-width">
+                <input matInput placeholder="Username" formControlName="user_name" name="username" required>
+              </mat-form-field>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <mat-form-field class="login-card-full-width">
+                <input matInput placeholder="Password" formControlName="password" type="password" name="password"
+                  required>
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+        <div class="error" *ngIf="isNotValid">
+          <p>Please enter valid details</p>
+        </div>
+        <div class="error" *ngIf="isNotValid">
+          <p>Please enter valid details</p>
+        </div>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button (click)="submitLogin()" [disabled]="loginForm.invalid">SIGN IN</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
